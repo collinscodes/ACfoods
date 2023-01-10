@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome.B/css/all.css">
+    <style>
+      *{
+       box-sizing: border-box;
+   }
+   body{
+       margin: 0;
+       padding: 0;
+       font-family: sans-serif;
+   }
+   .navbar{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       background-color: darkkhaki;
+       color: darkgreen;
+   }
+   .brand-title{
+       font-size: 40px;
+        margin-left: 70px;
+   }
+   .navbar-links ul{
+       margin: 0;
+       padding: 0;
+       display: flex;
+   }
+   .navbar-links li{
+       list-style: none;
+   }
+   .navbar-links li a {
+       text-decoration: none;
+       color: darkgreen;
+       margin-right: 70px;
+            padding: 8px;
+       display: block;
+       font-size: 20px;
+   }
+   .navbar-links li a:hover{
+       opacity: 0.8;
+   }
+   .toggle-button{
+       position: absolute;
+       top: .75rem;
+       right: 1rem;
+       display: none;
+       flex-direction: column;
+       justify-content: space-between;
+       width: 30px;
+       height: 21px;
+   }
+   .toggle-button .bar{
+       height: 3px;
+       width: 100%;
+       background-color: darkgreen;
+       border-radius: 10px;
+   }
+   @media (max-width:768px) {
+       .toggle-button{
+           display: flex;
+       }
+       .navbar-links{
+           display: none;
+           width: 100%;
+       }
+       .navbar{
+           flex-direction: column;
+           align-items: flex-start;
+       }
+       .navbar-links ul{
+           width: 100%;
+           flex-direction: column;
+           text-align: center;
+           background-color: rgb(58, 56, 28);
+       }
+       .navbar-linksli{
+           text-align: center;
+       }
+       .navbar-links.active{
+           display: flex;
+       }
+   }
+            .section{
+            width: 100%;
+        }
+        .section .container{
+            width: 90%;
+            display: block;
+            margin: 0px auto;
+            padding: 50px, 0px;
+            margin-top: 80px;
+        }
+        .container .title{
+            width: 100%;
+        }
+        .container .title h1{
+            text-transform: uppercase;
+            font-size: 35px;
+            color: darkgreen;
+        }
+        .article p{
+            color: rgb(0, 51, 0);
+        }
+        .content{
+            float: left;
+            width: 55%;
+        }
+        .content h1{
+            text-transform: uppercase;
+            font-size: 35px;
+            color: darkgreen;
+            margin-top: 30px;
+        }
+        .image section{
+            float: right;
+            width: 40%;
+        }
+        .image-section img{
+            margin-left: 30px;
+            margin-top: -40px;
+        }
+        .container .social{
+            width: 100%;
+            clear: both;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .container .social i{
+            height: 45px;
+            width: 45px;   
+            border-radius: 50%;
+            color: #fff; 
+            background-color: green;
+            margin: 0px, 5px;
+            line-height: 45px;
+            text-align: center;
+            font-size: 25px;
+        }
+        .container .social i:hover{
+            color: #fff;
+            background-color: rgb(5, 224, 5);
+            transition: 1s ease;
+            transform: rotate(360deg);
+        }
+        @media screen and (max-width: 1254px) {
+           .section .container{
+               width: 80%;
+               display: block;
+               margin: auto;
+           } 
+           .content{
+               flex: none;
+               width: 100%;
+               display: block;
+               margin: auto;
+           }
+           .image-section{
+               float: none;
+               width: 100%;
+               margin-top: 50px;
+           }
+           .image-section img{
+               width: 100%;
+               height: auto;
+               display: block;
+               margin: auto;
+           }
+           .container .social i{
+               font-size: 19px;
+               height: 35px;
+               width: 35px;
+               line-height: 35px;
+           }
+        }
+        @media (max-width: 768px) {
+            .container .title{
+            width: 100%;
+        }
+        .container .title h1{
+            text-transform: uppercase;
+            font-size: 20px;
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .content h1{
+            text-transform: uppercase;
+            font-size: 20px;
+            color: darkgreen;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        .container .social i{
+               font-size: 15px;
+               height: 35px;
+               width: 25px;
+               line-height: 35px;
+           }
+           .container .social i{
+            height: 40px;
+            width: 30px;   
+            border-radius: 50%;
+            color: #fff; 
+            background-color: green;
+            margin: 0px, 5px;
+            line-height: 45px;
+            text-align: center;
+            font-size: 20px;
+        }
+        }
+    @media (max-width: 900px){
+        .container .title h1{
+            text-transform: uppercase;
+            font-size: 35px;
+            color: darkgreen;
+            margin-top: 50px;
+        }
+    }
+        @media (max-width: 474px){
+            .container .title{
+            width: 100%;
+        }
+        .container .title h1{
+            text-transform: uppercase;
+            font-size: 20px;
+            color: darkgreen;
+            font-weight: bold;
+        }
+        }
+        @media (max-width: 285px){
+            .container .title{
+            width: 100%;
+        }
+        .container .title h1{
+            text-transform: uppercase;
+            font-size: 13px;
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .content h1{
+            text-transform: uppercase;
+            font-size: 13px;
+            color: darkgreen;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        }
+        @media (max-width: 195px){
+            .container .title{
+            width: 100%;
+        }
+        .container .title h1{
+            text-transform: uppercase;
+            font-size: 8px;
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .content h1{
+            text-transform: uppercase;
+            font-size: 8px;
+            color: darkgreen;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        .article p{
+            color: rgb(0, 51, 0);
+            font-size: 7px;
+        }
+        }
+        @media screen and (max-width: 1100px){
+            .brand-title{
+               font-size: 40px;
+               margin: .5rem;
+               padding-right: 50px;
+   }
+   .navbar-links li a {
+       text-decoration: none;
+       color: darkgreen;
+       padding-right: 3rem;
+       display: block;
+       font-size: 20px;
+   }
+   .navbar-links li a:hover{
+       opacity: 0.5;
+   }
+        }
+        @media (max-width: 215px) {
+            .brand-title{
+               font-size: 18px;
+               margin: .5rem;
+               padding-right: 50px;
+   }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">AC<sub>Foods</sub></div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="Project.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="meal.html">Meals</a></li>
+                <li><a href="todo.html">To-do List</a></li>
+            </ul>
+        </div>
+     </nav>
+   <div class="section">
+     <div class="container">
+         <div class="title">
+             <h1>Our Organization</h1>
+         </div>
+         <div class="content">
+             <div class="article">
+             <p>At our Organization we believe there is a better platform where you can learn how to cook both local and continental foods online. We're very passionate about it and our mission is to make people achieve it. We focus on educating people on how to cook and for those who already know how to, We teach them better approaches so as to improve their services and make them world class. </p>
+             <h1>Our Mission</h1>
+             <p>"To educate people about better cooking recipes and procedures in order to achieve balanced diet and improve the overall wellbeing of people"</p>
+             <h1>Our Vision</h1>
+             <p>"To improve the quality of life through sensitization about better cooking methods and procedures"</p>
+             </div>
+            </div>
+            <div class="image-section">
+                <img src="aboutus.jpg">
+            </div>
+            <div class="social">
+                <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+                <a href=""><i class="myinsta fab fa-instagram fa-2x"></i></a>
+                <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+            </div>
+     </div>       
+   </div>  
+   <script>
+       const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () =>{
+    navbarLinks.classList.toggle('active')
+})
+   </script>   
+</body>
+</html>

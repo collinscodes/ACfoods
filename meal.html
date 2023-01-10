@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome.B/css/all.css">
+    <style>
+         *{
+       box-sizing: border-box;
+   }
+   body{
+       margin: 0;
+       padding: 0;
+       font-family: sans-serif;
+   }
+   .navbar{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       background-color: darkkhaki;
+       color: darkgreen;
+   }
+   .brand-title{
+       font-size: 40px;
+       margin-left: 70px;
+   }
+   .navbar-links ul{
+       margin: 0;
+       padding: 0;
+       display: flex;
+   }
+   .navbar-links li{
+       list-style: none;
+   }
+   .navbar-links li a {
+       text-decoration: none;
+       color: darkgreen;
+       margin-right: 70px;
+            padding: 8px;
+       display: block;
+       font-size: 20px;
+   }
+   .navbar-links li a:hover{
+       opacity: 0.5;
+   }
+   .toggle-button{
+       position: absolute;
+       top: .75rem;
+       right: 1rem;
+       display: none;
+       flex-direction: column;
+       justify-content: space-between;
+       width: 30px;
+       height: 21px;
+   }
+   .toggle-button .bar{
+       height: 3px;
+       width: 100%;
+       background-color: darkgreen;
+       border-radius: 10px;
+   }
+   @media (max-width:768px) {
+       .toggle-button{
+           display: flex;
+       }
+       .navbar-links{
+           display: none;
+           width: 100%;
+       }
+       .navbar{
+           flex-direction: column;
+           align-items: flex-start;
+       }
+       .navbar-links ul{
+           width: 100%;
+           flex-direction: column;
+           text-align: center;
+           background-color: rgb(58, 56, 28);
+           height: 100%;
+       }
+       .navbar-linksli{
+           text-align: center;
+       }
+       .navbar-links.active{
+           display: flex;
+       }
+   }
+   @media screen and (max-width: 1100px){
+            .brand-title{
+               font-size: 40px;
+               margin: .5rem;
+               padding-right: 50px;
+   }
+   .navbar-links li a {
+       text-decoration: none;
+       color: darkgreen;
+       padding-right: 3rem;
+       display: block;
+       font-size: 20px;
+   }
+        }
+        .slider{
+            position: absolute;
+            width: 100%;
+        }
+        .slidertitle{
+                width: 100%;
+                position: relative;
+        }
+        .slidertitle h1{
+                text-align: center;
+                color: darkgreen;
+                font-size: 4vw;
+                font-family: 'Lobster', cursive;
+                margin-top: 70px;
+                font-weight: bold;
+        }
+        @media (max-width: 850px){
+            .slidertitle h1{
+                text-align: center;
+                color: darkgreen;
+                font-size: 40px;
+                font-family: 'Lobster', cursive;
+                margin-top: 70px;
+                font-weight: bold;
+        }
+        }
+        @media (max-width: 450px) {
+        .slider img{
+                height: 130px;
+        }
+        .slidertitle{
+                width: 100%;
+                position: relative;
+        }
+        .slidertitle h1{
+                text-align: center;
+                color: darkgreen;
+                font-size: 40px;
+                font-family: 'Lobster', cursive;
+                margin-top: 70px;
+                font-weight: bold;
+        }
+        }
+        .searchbox{
+            margin-top: 150px;
+            height: 50px;
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+            cursor: pointer;
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 30px;
+            border: 1px solid #868686ef;
+            align-items: center;
+        }
+        .box1{
+          display: flex;
+          margin: 50px auto 0;
+          align-items: center;
+          justify-content: space-evenly;   
+      }
+      .searchbox input{
+        outline: none;
+        border: none;
+        font-weight: 500;
+        background: transparent;
+      }
+      .searchbox a .fas{
+        color: orangered;
+        font-size: 18px;
+      }
+      @media (max-width: 850px){
+        .searchbox{
+            margin-top: 180px;
+            height: 50px;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 30px;
+            border: 1px solid black;
+            align-items: center;
+        }
+        .box1{
+          display: flex;
+          margin: 50px auto 0;
+          align-items: center;
+          justify-content: space-evenly;   
+      }
+      .searchbox input{
+        outline: none;
+        border: none;
+        font-weight: 900;
+        background: transparent;
+      }
+      .searchbox a .fas{
+        color: orangered;
+        font-size: 15px;
+      }
+      }
+      @media (max-width: 450px) {
+        .searchbox{
+            margin-top: 60px;
+            height: 50px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 30px;
+            border: 1px solid #868686ef;
+            align-items: center;
+        }
+        .box1{
+          display: flex;
+          margin: 50px auto 0;
+          align-items: center;
+          justify-content: space-evenly;   
+      }
+      .searchbox input{
+        outline: none;
+        border: none;
+        font-weight: 500;
+        background: transparent;
+      }
+      .searchbox a .fas{
+        color: orangered;
+        font-size: 15px;
+      }
+      }
+      .box1 h3{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .jol-ingredients figcaption{
+         width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .fry-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .yam-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .box2{
+          display: flex;
+          margin: 20px auto;
+          align-items: center;
+          justify-content: space-evenly;   
+      }
+      .box2 h3{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .ama-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .moi-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .pep-ingredients figcaption{
+               width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .box3{
+          display: flex;
+          margin: 20px auto;
+          align-items: center;
+          justify-content: space-evenly; 
+      }
+      .box3 h3{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .aba-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .bea-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .tuw-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .box4{
+          display: flex;
+          margin: 20px auto;
+          align-items: center;
+          justify-content: space-evenly;
+      }
+      .box4 h3{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .egg-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .ric-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .yap-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .box5{
+        display: flex;
+        margin: 20px auto;
+          align-items: center;
+          justify-content: space-evenly;
+      }
+      .box5 h3{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .afa-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .ogb-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .edi-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .box6{
+          display: flex;
+          margin: 20px auto;
+          align-items: center;
+          justify-content: space-evenly;
+      }
+      .box6 h3{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .ban-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .spa-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .pot-ingredients figcaption{
+        width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+      }
+      .note{
+          margin-top: 10px;
+          margin-left: 50px;
+          font-size: 15px;
+          color: rgb(0, 49, 0);
+      }
+      .view{
+               text-align: center;
+               margin-top: 10px;
+               font-size: 20px;
+               margin-bottom: 50px;
+               font-weight: bold;
+           }
+           .view a{
+                text-decoration: none;
+                color: darkgreen;
+           }
+    @media (max-width: 768px) {
+        .box1{
+            width: 100%;
+          display: block;
+          margin-top: 50px;
+      }
+      .jol{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .jol-image img{
+          width: 100%;
+      }
+      .jol-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+      }
+      .fry{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .fry-image img{
+          width: 100%;
+      }
+      .fry-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+      }
+      .yam{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .yam-image img{
+          width: 100%;
+      }
+      .yam-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+      }
+      .box2{
+          display: block;
+          margin-top: 60px;
+          width: 100%;
+      }
+      .ama{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .ama-image img{
+          width: 100%;
+      }
+      .ama-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+      }
+      .moi{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .moi-image img{
+          width: 100%;
+      }
+      .moi-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+          height: 280px;
+      }
+     .pep{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+     }
+     .pep-image img{
+         width: 100%;
+     }
+      .pep-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+      }
+      .box3{
+          display: block;
+          margin-top: 60px;
+          width: 100%;
+      }
+      .aba{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .aba-image img{
+          width: 100%;
+      }
+      .aba-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+      }
+      .bea{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .bea-image img{
+          width: 100%;
+      }
+      .bea-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+          height: 270px;
+      }
+      .tuw{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .tuw-image img{
+          width: 100%;
+      }
+      .tuw-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+          height: 340px;
+      }
+      .box4{
+          display: block;
+          margin-top: 60px;
+          width: 100%;
+      }
+      .egg{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .egg-image img{
+          width: 100%;
+      }
+      .egg-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+          height: 250px;
+      }
+      .ric{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .ric-image img{
+          width: 100%;
+      }
+      .ric-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+      }
+      .yap{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .yap-image img{
+          width: 100%;
+      }
+      .yap-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+          height: 250px;
+      }
+      .box5{
+          display: block;
+          margin-top: 60px;
+          width: 100%;
+      }
+      .afa{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .afa-image img{
+          width: 100%;
+      }
+      .afa-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+          height: 250px;
+      }
+      .ogb{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .ogb-image img{
+          width: 100%;
+      }
+      .ogb-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+      }
+     .edi{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+     }
+     .edi-image img{
+         width: 100%;
+     }
+      .edi-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+          height: 300px;
+      }
+      .box6{
+          display: block;
+          margin-top: 60px;
+          width: 100%;
+      }
+      .ban{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .ban-image img{
+          width: 100%;
+      }
+      .ban-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+          height: 300px;
+      }
+      .spa{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+      }
+      .spa-image img{
+          width: 100%;
+      }
+      .spa-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+      }
+     .pot{
+        width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+     }
+     .pot-image img{
+         width: 100%;
+     }
+      .pot-ingredients figcaption{
+          width: 100%;
+          background-color: lightgray;
+          padding: 3px;
+          height: 250px;
+      }
+    }
+    .foot-section{
+        margin-top: 80px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: darkkhaki;
+      }
+      .footname{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .foot h1{
+        color: darkgreen;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      .socials{
+        text-align: center;
+      }
+      .socials i{
+        height: 35px;
+        width: 35px;   
+        border-radius: 50%;
+        color: darkgreen; 
+        margin: 0px, 5px;
+        line-height: 35px;
+        text-align: center;
+        font-size: 25px;
+      }
+      .foot h3{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: darkgreen;
+      }
+      .foot a{
+        text-decoration: none;
+        color: black;
+      }
+      .foot a:hover{
+         color: darkgreen;
+      }
+      .about{
+        margin-right: 100px;
+      }
+      .News{
+        margin-right: 100px;
+      }
+      .resources{
+        margin-right: 100px;
+      }
+      .contact{
+        margin-right: 100px;
+      }
+      .line{
+        height: 2px;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: green;
+      }
+      .copy{
+        align-items: center;
+        text-align: center;
+      }
+      @media (max-width: 450px) {
+        .foot-section{
+        margin-top: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: darkkhaki;
+      }
+      .footname{
+        display: block;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: 50px;
+      }
+      .foot h1{
+        color: darkgreen;
+        text-align: center;
+        font-weight: bold;
+      }
+      .socials{
+        text-align: center;
+      }
+      .socials i{
+        height: 35px;
+        width: 35px;   
+        border-radius: 50%;
+        color: darkgreen; 
+        margin: 0px, 5px;
+        line-height: 35px;
+        text-align: center;
+        font-size: 25px;
+      }
+      .foot h3{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: darkgreen;
+      }
+      .foot a{
+        text-decoration: none;
+        color: black;
+      }
+      .foot a:hover{
+         color: darkgreen;
+      }
+      .about{
+        margin-top: 30px;
+      }
+      .line{
+        height: 2px;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: green;
+      }
+      .copy{
+        align-items: center;
+        text-align: center;
+      }
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">AC<sub>Foods</sub></div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="Project.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="meal.html">Meals</a></li>
+                <li><a href="todo.html">To-do List</a></li>
+            </ul>
+        </div>
+     </nav>
+     <div class="slider">
+        <img src="mealslider.jpg" alt="" height="250px" width="100%">
+     </div>
+     <div class="slidertitle">
+        <h1>Meals</h1>
+     </div>
+
+     <div class="searchbox">
+            <input type="text" placeholder="Search for meals...">
+            <a href="">
+                <i class="fas fa-search"></i>
+            </a>
+     </div>
+        <div class="box1">
+            <div class="jol">
+                <div class="jol-image">
+                <img src="meal6.png" width="420px">
+            </div>
+            <div class="jol-ingredients">
+                <figcaption><p><h3>Name: Jollof Rice</h3></p><h3>Ingredients:</h3> Vegetable Oil, Tin of Tomatoes, Red poblano Peppers, Medium-sized onions, hot Peppers, Curry Powders, dried thymes, stock vegetables, chicken or beef, Uncooked long-grain rice, Salt, Water, Seasoning Cubes. <p><a href="jol.html">See more</a></p></figcaption>
+            </div>
+            </div>
+            <div class="fry">
+                <div class="fry-image">
+                <img src="meal7.jpg"  width="420px">
+                </div>
+                <div class="fry-ingredients">
+                    <figcaption><p><h3>Name: Fried Rice</h3></p><h3>Ingredients:</h3> Fresh vegetables, Beef liver, Vegetable oil, Curry Powder, Thyme, Seasoning Cubes, Medium-sized onions, Carrots, Green beans, Sweet Corn, Shrimps, Basmating Long grain Rice, Grilled Chicken or Beef. <p><a href="fry.html">See more</a></p> </figcaption>
+                </div>
+            </div>  
+            <div class="yam">
+                <div class="yam-image">
+                <img src="meal8.jpg"  width="420px">
+                </div>
+                <div class="yam-ingredients">
+                    <figcaption><p><h3>Name: Iyan and Egusi Soup</h3></p><h3>Ingredients:</h3>1/2 Tuber Yam, 2 Cups of Egusi, 5 fresh tomatoes, 8 balls Fresh Peppers, 1 Medium-sized icefish, Palm Oil, 1 ball onions, 5 stocks Seasoning Cubes, Ginger, Garlic, 1 small bunch Ugwu leaf. <p><a href="yam.html">See more</a></p></figcaption>
+            </div>
+            </div>
+            </div>
+            <div class="box2">
+                <div class="ama">
+                    <div class="ama-image">
+                    <img src="Amala.jpg" width="420px">
+                </div>
+                <div class="ama-ingredients">
+                    <figcaption><p><h3>Name: Amala with Gbegiri and Ewedu(Abula)</h3></p><h3>Ingredients:</h3>Yam flour, 1 cup ewedu leaves, locust beans, 8 scotch bonnets, 2 bell peppers, Onions, 8 chilli peppers, Palm Oil, Potassium Salt, Ground crayfish, Seasoning cubes and salt to taste.<p><a href="amala.html">See more</a></p></figcaption>
+                </div>
+                </div>
+                <div class="moi">
+                    <div class="moi-image">
+                    <img src="pap and moi.jpg"  width="420px">
+                    </div>
+                    <div class="moi-ingredients">
+                        <figcaption><p><h3>Name: Pap and Moin Moin</h3></p><h3>Ingredients:</h3>4 cups of beans, 6 boiled eggs, Onion, Red peppers, Few tomatoes, crayfish, 2 spoons of soya oil, 3 Seasoning cubes and pinch of salt<p><a href="pap.html">See more</a></p> </figcaption>
+                    </div>
+                </div> 
+                <div class="pep">
+                    <div class="pep-image">
+                    <img src="Pepper-Soup.jpg"  width="420px">
+                    </div>
+                    <div class="pep-ingredients">
+                        <figcaption><p><h3>Name: Pepper Soup with Goat meat</h3></p><h3>Ingredients:</h3>2Tsp Uziza leaves, 1lb Goat meat, 2Tsp crayfish, 1Tbs Pepper soup spice, 1Tsp Red chilli flakes, 1Tsp Ginger Powder, Onion, 1 scotch bonnet, 1 Seasoning cube, 4 cups of water, Salt to taste <p><a href="pep.html">See more</a></p></figcaption>
+                </div>
+                </div>
+                </div>
+                <div class="box3">
+                    <div class="aba">
+                        <div class="aba-image">
+                        <img src="Abacha.jpg" width="420px">
+                    </div>
+                    <div class="aba-ingredients">
+                        <figcaption><p><h3>Name: Abacha and Ugba(African Salad)</h3></p><h3>Ingredients:</h3>4 Cups Abacha, 2 cups Ugba, 1 cup palm Oil, 1Tsp Potash, 1 whole fresh fish, 2 Medium stock fish, 2 scotch bonnets, 1 onion, 4 garden eggs, 6 utazi leaves, 2Tbs crayfish Powder, 5 calabash Nutmeg seeds, Seasoning Cubes, Ogiri.<p><a href="abacha.html">See more</a></p></figcaption>
+                    </div>
+                    </div>
+                    <div class="bea">
+                        <div class="bea-image">
+                        <img src="beans.jpg"  width="420px">
+                        </div>
+                        <div class="bea-ingredients">
+                            <figcaption><p><h3>Name: Beans and Plantain porridge</h3></p><h3>Ingredients:</h3>250g beans, 1 ripe Plantain, 1 onion bulb, 2Tbs Ground crayfish, 1 stock cube, 1 spoonful of Red palm Oil, Pepper and salt to taste.<p><a href="beans.html">See more</a></p> </figcaption>
+                        </div>
+                    </div> 
+                    <div class="tuw">
+                        <div class="tuw-image">
+                        <img src="tuwon-shinkafa-miyar-taushe.jpg"  width="420px">
+                        </div>
+                        <div class="tuw-ingredients">
+                            <figcaption><p><h3>Name: Tuwon-shinkafa and Miyan-taushe</h3></p><h3>Ingredients:</h3>3 cups of Medium grain Rice, 1pc pumpkin, 2Tbs peanut butter, 6pcs assorted, 1pc smoked fish, 2 Cups locast beans, 2pcs scotch bonnets, 1 bunch spinach, 1pc bell peppers, 2pcs fresh tomatoes, 1 Onion, 100g Yakwa leaves, 5Tbsp Palm Oil. <p><a href="Tuwo.html">See more</a></p></figcaption>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="box4">
+                        <div class="egg">
+                            <div class="egg-image">
+                            <img src="yam and egg.jpg" width="420px">
+                        </div>
+                        <div class="egg-ingredients">
+                            <figcaption><p><h3>Name: Yam and Egg</h3></p><h3>Ingredients:</h3>1/2 Tuber yam, 7 eggs, 3 fresh Tomatoes diced, 4 fresh peppers diced, 1 Onion diced, vegetable Oil, 1 Seasoning cube, 1 green bell ppper diced, Salt to taste.  <p><a href="Egg.html">See more</a></p></figcaption>
+                        </div>
+                        </div>
+                        <div class="ric">
+                            <div class="ric-image">
+                            <img src="whiterice.jpg"  width="420px">
+                            </div>
+                            <div class="ric-ingredients">
+                                <figcaption><p><h3>Name: Whiterice and Stew</h3></p><h3>Ingredients:</h3>4 Cups of rice, 20 fresh Tomatoes, 5 cups vegetable Oil, 10 fresh peppers, 2 big Onions, 3Tbs Curry, 7 seasoning cubes, 1Tbs Thyme, 3pcs Ginger, 6 cloves Garlic, 300g chicken meat, Salt to taste. <p><a href="rice.html">See more</a></p> </figcaption>
+                            </div>
+                        </div> 
+                        <div class="yap">
+                            <div class="yap-image">
+                            <img src="Yam-Porridge.jpg"  width="420px">
+                            </div>
+                            <div class="yap-ingredients">
+                                <figcaption><p><h3>Name: Yam-Porridge</h3></p><h3>Ingredients:</h3>1kg white puna yam, Red palm oil, 1 smoked fish, 1Tbsp ground crayfish, 1 medium Onion, Fresh green Vegetable, chilli pepper, 2 big stock cubes, Salt to taste. <p><a href="Porridge.html">See more</a></p></figcaption>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="box5">
+                            <div class="afa">
+                                <div class="afa-image">
+                                <img src="Afang.jpg" width="420px">
+                            </div>
+                            <div class="afa-ingredients">
+                                <figcaption><p><h3>Name: Afang Soup</h3></p><h3>Ingredients:</h3>400g sliced Afang leaves, 250g water leaves, 20cl red Palm oil, beef, Kanda, Dry fish, 2Tbsp ground crayfish, seasoning cubes, Pepper and Salt to taste.<p><a href="afang.html">See more</a></p></figcaption>
+                            </div>
+                            </div>
+                            <div class="ogb">
+                                <div class="ogb-image">
+                                <img src="Ogbono.jpg"  width="420px">
+                                </div>
+                                <div class="ogb-ingredients">
+                                    <figcaption><p><h3>Name: Ogbono Soup</h3></p><h3>Ingredients:</h3>1 cup blended ogbono, 4 cups stocked beef or chicken, 1 cup stock fish, 2 stock cubes, 1/2 Tbsp Red Chilli flakes, 1Tbsp ground crayfish, Ugwu, 4 cups periwinkles, 2 Cups palm Oil, Salt to taste. <p><a href="ogbono.html">See more</a></p> </figcaption>
+                                </div>
+                            </div> 
+                            <div class="edi">
+                                <div class="edi-image">
+                                <img src="Edikaikong.jpg"  width="420px">
+                                </div>
+                                <div class="edi-ingredients">
+                                    <figcaption><p><h3>Name: Edikaikong</h3></p><h3>Ingredients:</h3>1kg Ugwu, 200g Water leaves, 500g of assorted meat, stock fish, smoked fish, 250ml Palm oil, 1 cup periwinkle, 2Tbsp ground crayfish, 2 stock cubes, 1 Medium-sized onion, 2 scotch bonnet pepper, Salt to taste.<p><a href="Edikaikong.html">See more</a></p></figcaption>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="box6">
+                                <div class="ban">
+                                    <div class="ban-image">
+                                    <img src="banga-soup.jpg" width="420px">
+                                </div>
+                                <div class="ban-ingredients">
+                                    <figcaption><p><h3>Name: Banga Soup</h3></p><h3>Ingredients:</h3>800g Palm nuts, 1 banga stick, 2 cups beef stock, 1 Medium-sized onion, 70g Banga spice, 2Tbsp ground crayfish, 1 cup periwinkles, 4 seasoning cubes, 2 scotch bonnets, assorted beef, handful of scent leaves and Salt to taste. <p><a href="Banga.html">See more</a></p></figcaption>
+                                </div>
+                                </div>
+                                <div class="spa">
+                                    <div class="spa-image">
+                                    <img src="spaghetti.jpg"  width="420px">
+                                    </div>
+                                    <div class="spa-ingredients">
+                                        <figcaption><p><h3>Name: Jollof Spaghetti</h3></p><h3>Ingredients:</h3>227g spaghetti, 1.5 cup pepper sauce, 1lb minced meat, 1 onion, 3 bay leaves, 1 large tomato, mixed vegetables, 3Tbsp vegetable oil, 2Tsp curry powder, 1Tsp Thyme, 3Tsp soup base, Salt to taste,  <p><a href="Spag.html">See more</a></p> </figcaption>
+                                    </div>
+                                </div> 
+                                <div class="pot">
+                                    <div class="pot-image">
+                                    <img src="potato.jpg"  width="420px">
+                                    </div>
+                                    <div class="pot-ingredients">
+                                        <figcaption><p><h3>Name: Potato and Meat Stew</h3></p><h3>Ingredients:</h3>Potatoes, Meat(pork, beef, veal, chicken or game meat), Onions, tomato paste, pepper, Salt to taste, Paprika(optional)<p><a href="potato.html">See more</a></p></figcaption>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="note">
+                                    <p>NOTE: The quantity of Ingredients depends on the quantity of food you want to prepare.</p>
+                               </div>
+                               <div class="view">
+                                <a href="meal.html">View More Meals</a>
+                            </div>
+
+                               <footer>
+                                <div class="foot-section">
+                                  <div class="foot">
+                                        <h1>AC<sub>Foods</sub></h1>
+                                   <div class="footname">       
+                                        <div class="about">
+                                            <h3>About Us</h3>
+                                            <p><a href="Project.html">Home</a></p>
+                                            <p><a href="AboutUs.html">About Us</a></p>
+                                            <p><a href="">FAQs</a></p>
+                                            <p><a href="">Reviews</a></p>
+                                            <p><a href="">Stories</a></p>
+                                        </div>
+                                        <div class="News">
+                                            <h3>News</h3>
+                                            <p> <a href="">Press Room</a></p>
+                                            <p> <a href="">News and Media</a></p>
+                                            <p> <a href="">The Lux Magazine</a></p>
+                                        </div>
+                                    <div class="contact">
+                                        <h3>Contact Us</h3>
+                                        <p> <a href="AboutUs.html">About Us</a></p>
+                                        <p> <a href="">Menu</a></p>
+                                        <p> <a href="contact.html">Contact</a></p>
+                                    </div>
+                                    <div class="resources">
+                                        <h3>Privacy</h3>
+                                        <p><a href="">Privacy</a></p>
+                                        <p><a href="">Policy</a></p>
+                                        <p><a href="">Payments</a></p>
+                                        <p><a href="">Terms</a></p>
+                                    </div>     
+                                </div>
+                                <div class="socials">
+                                          <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+                                          <a href=""><i class="myinsta fab fa-instagram fa-2x"></i></a>
+                                          <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+                                          <a href=""><i class="fab fa-snapchat fa-2x"></i></a>
+                                </div>
+                                     <hr class="line">
+                                     <div class="copy">
+                                      <p>&copy; Copyright 2022.</p>
+                                     </div>
+                                </div>
+                                </div>
+                              </footer>      
+
+                               <script>
+                                    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+                                    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+                                     toggleButton.addEventListener('click', () =>{
+                                     navbarLinks.classList.toggle('active')
+                                     })
+                               </script>
+</body>
+</html>

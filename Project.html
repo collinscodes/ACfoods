@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="project.js"></script>
+    <link rel="stylesheet" href="fontawesome.B/css/all.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;            
+            background-color: darkkhaki;
+            color: darkgreen;
+        }
+        .brand-title{
+            font-size: 40px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 70px;
+        }
+        .navbar-links ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar-links li{
+            list-style: none;
+        }
+        .navbar-links li a {
+            text-decoration: none;
+            color: darkgreen;
+            margin-right: 70px;
+            padding: 8px;
+            display: block;
+            font-size: 20px;
+        }
+        .navbar-links li a:hover{
+            opacity: 0.5;
+        }
+        .toggle-button{
+            position: absolute;
+            top: .75rem;
+            right: 1rem;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+        .toggle-button .bar{
+            height: 3px;
+            width: 100%;
+            background-color: darkgreen;
+            border-radius: 10px;
+        }
+        @media (max-width:768px) {
+            .toggle-button{
+                display: flex;
+            }
+            .navbar{
+                background-color: darkkhaki;
+            }
+            .navbar-links{
+                display: none;
+                width: 100%;
+            }
+            .navbar{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar-links ul{
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                background-color: rgb(58, 56, 28);
+            }
+            .navbar-links li a{
+                text-align: center;
+                color: white;
+            }
+            .navbar-links.active{
+                display: flex;
+            }
+        }
+        @media screen and (max-width: 1100px){
+                 .brand-title{
+                    font-size: 40px;
+                    margin: .5rem;
+                    padding-right: 50px;
+        }
+        .navbar-links li a {
+            text-decoration: none;
+            color: darkgreen;
+            padding-right: 3rem;
+            display: block;
+            font-size: 20px;
+        }
+        .navbar-links li a:hover{
+            opacity: 0.5;
+        }
+             }
+        #slider{
+               overflow: hidden;
+           }
+           #slider figure{
+               position: relative;
+               width: 500%;
+               margin: 0;
+               animation: 12s slider infinite;
+           }
+           #slider figure img{
+               width: 20%;
+               float: left;
+           }
+           @media (max-width: 450px) {
+            #slider figure img{
+               height: 150px;
+           }
+           }
+           @keyframes slider {
+               0%{
+                   left: 0;
+               }
+               20%{
+                   left: 0;
+               }
+               25%{
+                   left: -100%;
+               }
+               45%{
+                   left: -100%;
+               }
+               50%{
+                   left: -200%;
+               }
+               70%{
+                   left: -200%;
+               }
+               75%{
+                   left: -300%;
+               }
+               95%{
+                   left: -300%;
+               }
+               100%{
+                   left: -400%;
+               }
+           }
+           .wel{
+               text-align: center;
+               font-family: sans-serif;
+               margin-top: 50px;  
+           }
+           .wel h1{
+               font-size: 40px;
+               color: darkgreen;
+           }
+           .wel h2{
+             color: darkgreen;
+             font-size: 30px;
+             margin-top: 0px;
+           }
+           .wel p{
+               font-size: 20px;
+               margin-top: -10px;
+               color: rgb(0, 26, 0);
+           }
+           @media screen and (max-width: 450px){
+            .wel{
+               text-align: center;
+               font-family: sans-serif;
+               margin-top: 50px;  
+           }
+           .wel h1{
+               font-size: 27px;
+               color: darkgreen;
+           }
+           .wel h2{
+             color: darkgreen;
+             font-size: 18px;
+             margin-top: 0px;
+           }
+           .wel p{
+               font-size: 13px;
+               margin-top: -10px;
+               color: rgb(0, 26, 0);
+           } 
+           .wel input{
+               padding: 5px;
+               border: none;
+               background-color: orangered;
+               color: white;
+               font-weight: bold;
+               border-radius: 2px;
+               margin-bottom: 10px;
+               cursor: pointer;
+           }
+           .sus p{
+               font-size: 13px;
+           }
+           }
+           .wel input{
+               padding: 8px;
+               border: none;
+               background-color: orangered;
+               color: white;
+               font-weight: bold;
+               border-radius: 2px;
+               margin-bottom: 10px;
+               cursor: pointer;
+           }
+           .wel input:focus{
+               color: white;
+               background-color: green;
+           }
+           .sus p{
+               font-size: 15px;
+           }
+           .meal{
+                text-align: center;
+                color: darkgreen;
+                margin-top: 50px;
+           }
+           .box{
+               display: flex;
+               margin: 0 auto;
+               align-items: center;
+               justify-content: space-evenly;   
+           }
+           .jol-ingredients figcaption{
+               width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+           }
+           .fry-ingredients figcaption{
+               width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+           }        
+           .yam-ingredients figcaption{
+               width: 420px;
+               background-color: #efefefef;
+               padding: 3px;
+           }
+           .view{
+               text-align: center;
+               margin-top: 10px;
+               font-size: 25px;
+               margin-bottom: 50px;
+           }
+           .view a{
+                text-decoration: none;
+           }
+           .note{
+               margin-top: 10px;
+               margin-left: 30px;
+               font-size: 20px;
+               color: rgb(0, 49, 0);
+           }
+           .form{
+               background-color: darkkhaki;
+               padding-top: 15px;
+               width: 500px;
+               height: 400px;
+               margin: auto;
+           }
+           .for{
+               text-align: center;
+           }
+           .form h1{
+             color: darkgreen;
+             margin-bottom: 30px; 
+           }
+           .for p{
+               color: darkgreen;
+               font-size: 20px;
+           }
+           .form input{
+               margin-bottom: 20px;
+               margin-top: -20px;
+               width: 50%;
+               height: 40px;
+               border-radius: 5px;
+               border: 1px solid limegreen;
+           }
+         .form input:hover{
+             border: 1px solid black;
+             outline: 0;
+         }
+           .form textarea{
+               margin-top: -10px;
+               width: 50%;
+               height: 80px;
+               border-radius: 5px;
+               border: 1px solid limegreen;
+           }
+           .form textarea:hover{
+             border: 1px solid black;
+             outline: 0;
+         }
+         .comm button{
+             border: 0;
+             padding: 10px 30px;
+             background: green;
+             font-size: 18px;
+             border-radius: 5px;
+             color: white;
+             margin-bottom: 20px;
+         }
+         @media (max-width: 450px) {
+            .form{
+               background-color: darkkhaki;
+               padding-top: 15px;
+               width: 250px;
+               height: 400px;
+               margin: auto;
+           }
+           .for{
+               text-align: center;
+           }
+           .form h1{
+             color: darkgreen;
+             margin-bottom: 10px; 
+           }
+           .for p{
+               color: darkgreen;
+               font-size: 15px;
+           }
+           .form input{
+               margin-bottom: 10px;
+               margin-top: -20px;
+               width: 50%;
+               height: 40px;
+               border-radius: 5px;
+               border: 1px solid limegreen;
+           }
+         .form input:hover{
+             border: 1px solid black;
+             outline: 0;
+         }
+           .form textarea{
+               margin-top: -10px;
+               width: 50%;
+               height: 80px;
+               border-radius: 5px;
+               border: 1px solid limegreen;
+           }
+           .form textarea:hover{
+             border: 1px solid black;
+             outline: 0;
+         }
+         .comm button{
+             border: 0;
+             padding: 8px 20px;
+             background: green;
+             font-size: 18px;
+             border-radius: 5px;
+             color: white;
+             margin-top: 10px;
+         }
+         }
+         .comm button:hover{
+             background-color: darkgreen;
+             color: white;
+         }
+         @media (max-width: 768px) {
+             .box{
+                 width: 100%;
+                display: block;
+               margin-top: 60px;
+           }
+           .jol{
+               width: 90%;
+               text-align: center;
+               margin: 0 auto;
+               margin-bottom: 30px;
+           }
+           .jol-image img{
+               width: 100%;
+           }
+           .jol-ingredients figcaption{
+               width: 100%;
+               background-color: #efefefef;
+               padding: 3px;
+           }
+           .fry{
+              width: 90%;
+              text-align: center;
+              margin: 0 auto;
+           }
+           .fry-image img{
+               width: 100%;
+           }
+           .fry-ingredients figcaption{
+               width: 100%;
+               background-color: #efefefef;
+               padding: 3px;
+               margin-top: -10px;
+           }
+            .yam{
+                width: 90%;
+                margin: 0 auto;
+            }
+            .yam-image img{
+                width: 100%;
+            }
+           .yam-ingredients figcaption{
+               width: 100%;
+               background-color: #efefefef;
+               padding: 3px;
+           }
+           .view{
+               text-align: center;
+               margin-top: 10px;
+               font-size: 18px;
+               margin-bottom: 50px;
+           }
+           .view a{
+                text-decoration: none;
+           }
+           .note{
+               margin: 0 auto;
+               font-size: 15px;
+               color: rgb(0, 49, 0);
+           }
+        }
+           .view{
+               text-align: center;
+               margin-top: 10px;
+               font-size: 20px;
+               margin-bottom: 50px;
+           }
+           .view a{
+                text-decoration: none;
+                color: darkgreen;
+           }
+           .note{
+               margin-top: 10px;
+               margin-left: 30px;
+               font-size: 15px;
+               color: rgb(0, 49, 0);
+           }
+         .foot-section{
+        margin-top: 80px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: darkkhaki;
+      }
+      .footname{
+        display: flex;
+        justify-content: center;
+        margin-top: -30px;
+      }
+      .foot h1{
+        color: darkgreen;
+        text-align: center;
+      }
+      .socials{
+        text-align: center;
+      }
+      .socials i{
+        height: 35px;
+        width: 35px;   
+        border-radius: 50%;
+        color: darkgreen; 
+        margin: 0px, 5px;
+        line-height: 35px;
+        text-align: center;
+        font-size: 25px;
+      }
+      .foot h3{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: darkgreen;
+      }
+      .foot a{
+        text-decoration: none;
+        color: black;
+      }
+      .foot a:hover{
+         color: darkgreen;
+      }
+      .about{
+        margin-right: 100px;
+      }
+      .News{
+        margin-right: 100px;
+      }
+      .resources{
+        margin-right: 100px;
+      }
+      .contact{
+        margin-right: 100px;
+      }
+      .line{
+        height: 2px;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: green;
+      }
+      .copy{
+        align-items: center;
+        text-align: center;
+      }
+      @media (max-width: 450px) {
+        .foot-section{
+        margin-top: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: darkkhaki;
+      }
+      .footname{
+        display: block;
+        margin-top: -10px;
+        margin-left: 30px;
+      }
+      .foot h1{
+        font-size: 25px;
+        color: darkgreen;
+        text-align: center;
+      }
+      .socials{
+        text-align: center;
+      }
+      .socials i{
+        height: 35px;
+        width: 35px;   
+        border-radius: 50%;
+        color: darkgreen; 
+        margin: 0px, 5px;
+        line-height: 35px;
+        text-align: center;
+        font-size: 25px;
+      }
+      .foot h3{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: darkgreen;
+      }
+      .foot a{
+        text-decoration: none;
+        color: black;
+      }
+      .foot a:hover{
+         color: darkgreen;
+      }
+      .about{
+        margin-top: 30px;
+      }
+      .line{
+        height: 2px;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: green;
+      }
+      .copy{
+        align-items: center;
+        text-align: center;
+      }
+      }
+         </style>
+</head>
+<body>
+   <nav class="navbar">
+      <div class="brand-title">AC<sub>Foods</sub></div>
+      <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+          <ul>
+              <li><a href="Project.html">Home</a></li>
+              <li><a href="AboutUs.html">About Us</a></li>
+              <li><a href="meal.html">Meals</a></li>
+              <li><a href="todo.html">To-do List</a></li>
+          </ul>
+      </div>
+   </nav>
+   <div id="slider">
+    <figure>
+    <img src="meal1.jpg">
+    <img src="meal2.jpg"> 
+    <img src="meal3.jpg"> 
+    <img src="meal4.jpg"> 
+    </figure>
+</div>
+<div class="wel">
+    <h1>Welcome!</h1>
+    <h2>Get Cooking</h2>
+    <p>Delicious ingredients you'll love to eat.<p>
+    <p>Simple recipes you'll live to cook always.</p>
+    <input type="button" value="SUSCRIBE NOW!" id="sub_btn" onclick="c();"></input>
+    <div class="sus">
+    <p>Hit the Suscribe button for more updates.</p>
+</div>
+</div>
+<div class="meal">
+    <h1>Meals</h1>
+</div>
+<div class="mealbox">
+    <div class="box">
+        <div class="jol">
+            <div class="jol-image">
+            <img src="meal6.png" width="420px">
+        </div>
+        <div class="jol-ingredients">
+            <figcaption><p><h3>Name: Jollof Rice</h3></p><h3>Ingredients:</h3> Vegetable Oil, Tin of Tomatoes, Red poblano Peppers, Medium-sized onions, hot Peppers, Curry Powders, dried thymes, stock vegetables, chicken or beef, Uncooked long-grain rice, Salt, Water, Seasoning Cubes. <p><a href="jol.html">See more</a></p></figcaption>
+        </div>
+        </div>
+        <div class="fry">
+            <div class="fry-image">
+            <img src="meal7.jpg"  width="420px">
+            </div>
+            <div class="fry-ingredients">
+                <figcaption><p><h3>Name: Fried Rice</h3></p><h3>Ingredients:</h3> Fresh vegetables, Beef liver, Vegetable oil, Curry Powder, Thyme, Seasoning Cubes, Medium-sized onions, Carrots, Green beans, Sweet Corn, Shrimps, Basmating Long grain Rice, Grilled Chicken or Beef. <p><a href="fry.html">See more</a></p> </figcaption>
+            </div>
+        </div>  
+        <div class="yam">
+            <div class="yam-image">
+            <img src="meal8.jpg"  width="420px">
+            </div>
+            <div class="yam-ingredients">
+                <figcaption><p><h3>Name: Iyan and Egusi Soup</h3></p><h3>Ingredients:</h3>1/2 Tuber Yam, 2 Cups of Egusi, 5 fresh tomatoes, 8 balls Fresh Peppers, 1 Medium-sized icefish, Palm Oil, 1 ball onions, 5 stocks Seasoning Cubes, Ginger, Garlic, 1 small bunch Ugwu leaf. <p><a href="yam.html">See more</a></p></figcaption>
+        </div>
+        </div>
+        </div>
+</div>
+<div class="note">
+    <p>NOTE: The quantity of Ingredients depends on the quantity of food you want to prepare.</p>
+</div>
+<div class="view">
+    <a href="meal.html">View All Meals</a>
+</div>
+<div class="form">
+ <form action="#" class="for" id="form">
+          <h1>AC<sub>Foods</sub></h1>
+          <p>Email address:</p>
+          <input type="text" id="email" placeholder="Enter email address" required>
+          <p>Comments:</p>
+           <textarea id="comment" placeholder="Type Your Comment..." required></textarea>
+           <div class="comm ">
+           <button id="SubmitForm">Submit</button>
+        </div>
+ </form>
+</div>
+<footer>
+    <div class="foot-section">
+      <div class="foot">
+            <h1>AC<sub>Foods</sub></h1>
+       <div class="footname">       
+            <div class="about">
+                <h3>About Us</h3>
+                <p><a href="Project.html">Home</a></p>
+                <p><a href="AboutUs.html">About Us</a></p>
+                <p><a href="">FAQs</a></p>
+                <p><a href="">Reviews</a></p>
+                <p><a href="">Stories</a></p>
+            </div>
+            <div class="News">
+                <h3>News</h3>
+                <p> <a href="">Press Room</a></p>
+                <p> <a href="">News and Media</a></p>
+                <p> <a href="">The Lux Magazine</a></p>
+            </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p> <a href="AboutUs.html">About Us</a></p>
+            <p> <a href="">Menu</a></p>
+            <p> <a href="contact.html">Contact</a></p>
+        </div>
+        <div class="resources">
+            <h3>Privacy</h3>
+            <p><a href="">Privacy</a></p>
+            <p><a href="">Policy</a></p>
+            <p><a href="">Payments</a></p>
+            <p><a href="">Terms</a></p>
+        </div>     
+    </div>
+    <div class="socials">
+              <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+              <a href=""><i class="myinsta fab fa-instagram fa-2x"></i></a>
+              <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+              <a href=""><i class="fab fa-snapchat fa-2x"></i></a>
+    </div>
+         <hr class="line">
+         <div class="copy">
+          <p>&copy; Copyright 2022.</p>
+         </div>
+    </div>
+    </div>
+  </footer>      
+
+   <script>
+       const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () =>{
+    navbarLinks.classList.toggle('active')
+})
+   </script>
+</body>
+</html>
